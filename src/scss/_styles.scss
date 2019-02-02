@@ -3,9 +3,16 @@
 Project		: 	College Application Tracker
 Author 		: 	Ari Simon
 
-Set 		: 	Variables and Mixins
+Set 		: 	Application
 
 =====*/
 
+
 /*----- Utilities -------*/
 @import "_variables.scss";
+@import "_global.scss";
+@import "_grid.scss";
+
+
+/*----- Components -------*/
+
