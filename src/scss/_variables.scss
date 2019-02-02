@@ -1,0 +1,51 @@
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Variables and Mixins
+
+=====*/
+
+
+/*----- COLORS -----*/
+/* RGB */
+$white	: 	#FFFFFF;
+$black	: 	#050505;
+$grey	: 	#494947;
+$blue	:	#2176FF;
+$ltblue	: 	#33A1FD;
+$yellow	: 	#FDCA40;
+$orange	: 	#F79824;
+$red	: 	#A20021;
+$green	: 	#319600;
+
+
+/*----- FONTS -----*/
+$header 	: 	'Montserrat', sans-serif;
+$body 		: 	'Roboto', sans-serif;
+
+
+/*----- GRADIENTS -----*/
+
+
+/*----- MIXINS -----*/
+
+@mixin center-v 		{ position: absolute; top: 50%; transform: translateY(-50%); }
+	@mixin cancel-v 		{ position: relative; top: auto; transform: none; }
+@mixin center-h 		{ position: absolute; left: 50%; transform: translateX(-50%); }
+@mixin center-vh 		{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+	@mixin cancel-vh 		{ position: relative; top: auto; left: auto; transform: none; }
+
+@mixin center-bottom 	{ position: absolute; bottom: 0.5rem; width: 100%; text-align: center; }
+
+@mixin cover 			{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+@mixin round-photo 		{ background-position: center center; background-size: cover; border-radius: 50%; }
+@mixin round 			{ border-radius: 50%; }
+
+@mixin active-shadow 	{ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+
+/*@mixin box-shadow 		{ box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.2); }*/
+@mixin box-shadow 		{ box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5); }
+@mixin button-shadow 	{ box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5); }
