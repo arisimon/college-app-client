@@ -11,7 +11,7 @@ Set 		: 	Style Guide - Global Styles
 
 /*----- GLOBAL -----*/
 
-	* 					{ font-family: $body; color: $black; outline: none; box-sizing: border-box;}
+	* 					{ font-family: $body; outline: none; box-sizing: border-box;}
 
 	body 				{ 
 		&.noscroll 			{ overflow: hidden; }
@@ -41,7 +41,7 @@ Set 		: 	Style Guide - Global Styles
 
 
 
-	a 					{ color: $ltblue; 
+	a 					{ 
 		&.alert 			{ color: $orange; }
 	}
 
@@ -72,10 +72,6 @@ Set 		: 	Style Guide - Global Styles
 	.text-green 		{ color: $green; font-style: normal; }
 	.text-orange 		{ color: $orange; font-style: normal; }
 	.text-ltblue 		{ color: $ltblue; font-style: normal; }
-
-	.maxlength { position: relative;
-		span { position: absolute; bottom: 4px; right: 22px; color: #ccc; font-size: 0.8em; }
-	}
 
 
 	.center-v 			{ position: relative;
@@ -125,22 +121,14 @@ Set 		: 	Style Guide - Global Styles
 
 
 	dl 					{
-		dt 					{ font-family: $header; font-weight: 400; color: $orange; font-size: 1.25rem; margin: 0; }
+		dt 					{ font-family: $header; font-weight: 400; font-size: 1.25rem; margin: 0; }
 		dd 					{ margin-bottom: 1rem; }
 	}
 
 	
 
 	table 				{
-		/*&.member-list 		{
-			tr 					{ margin-bottom: 2px; border-bottom: 5px solid #f4f5f8;
-				&:nth-child(even) 	{ background-color: #fff; border-bottom: 5px solid #f4f5f8; }
-			}
-			td 					{
-				img 				{ width: 50px; padding-bottom: 50px; background-position: center center; background-size: cover; @include round; margin-right: 1rem; }
-				button 				{ width: 80px; padding: 0; }
-			}
-		}*/
+		
 	}
 
 

@@ -1,0 +1,735 @@
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Application
+
+=====*/
+/*----- Utilities -------*/
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Variables and Mixins
+
+=====*/
+/*----- COLORS -----*/
+/* RGB */
+/*----- FONTS -----*/
+/*----- GRADIENTS -----*/
+/*----- MIXINS -----*/
+/*@mixin box-shadow 		{ box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.2); }*/
+/*----- LARGE -----*/
+/* Grid measurements:
+ *
+ *   960px wide including 12 gutters (half gutters on both edges)
+ *
+ *   60px columns (12)
+ *   20px gutters (two half-gutters + 11 full gutters, so 12 total)
+ *
+ *
+ *   For smaller screens, we always want 20px of padding on either side,
+ *   so 960 + 20 + 20 => 1000px
+ *
+ **/
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: "";
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
+  float: left;
+  /* Gutters:
+   * Each column is padded by half-a-gutter on each side,
+   *
+   * Half a gutter is 10px, 10/960 (context) = 1.041666%
+   *
+   */
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+/* Mobile defaults */
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
+  width: 100%;
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  /* 3 columns, 3/12 in % */
+  .col-3 {
+    width: 25%;
+  }
+
+  /* 4 columns, 4/12 in % */
+  .col-4 {
+    width: 33.33%;
+  }
+
+  /* 6 columns 6/12 in % */
+  .col-6 {
+    width: 50%;
+  }
+
+  /* 12 columns, 12/12 */
+  .col-12 {
+    width: 100%;
+  }
+}
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Style Guide - Global Styles
+
+=====*/
+/*----- GLOBAL -----*/
+* {
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+p input[type=checkbox], .help-text input[type=checkbox] {
+  margin: 0;
+}
+
+span {
+  color: inherit;
+}
+
+blockquote {
+  border: none;
+}
+
+strong {
+  font-family: inherit;
+}
+
+a.alert {
+  color: #F79824;
+}
+
+strong, em, i {
+  color: inherit;
+  font-size: inherit;
+}
+
+ol li {
+  margin-bottom: 1rem;
+}
+ol.level-two {
+  list-style-type: upper-latin;
+}
+ol.level-three {
+  list-style-type: upper-roman;
+}
+ol ul li {
+  margin-bottom: 0.25rem;
+}
+
+.page {
+  background: #FFFFFF;
+  max-width: 2500px;
+  margin: 0 auto;
+}
+
+.round-right {
+  border-radius: 0 1000px 1000px 0;
+}
+
+.round-left {
+  border-radius: 1000px 0 0 1000px;
+}
+
+.round-bottom {
+  border-radius: 0 0 1000px 1000px;
+}
+
+.round-top {
+  border-radius: 1000px 1000px 0 0;
+}
+
+.round-wrap {
+  border-radius: 25px;
+}
+
+.button-shadow {
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.box-shadow {
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.border-radius {
+  border-radius: 15px;
+}
+
+.text-green {
+  color: #319600;
+  font-style: normal;
+}
+
+.text-orange {
+  color: #F79824;
+  font-style: normal;
+}
+
+.text-ltblue {
+  color: #33A1FD;
+  font-style: normal;
+}
+
+.center-v {
+  position: relative;
+}
+.center-v .copy {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button {
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  text-transform: uppercase;
+  background-color: #33A1FD;
+  font-style: normal;
+  margin-bottom: 0;
+}
+.button.round {
+  border-radius: 1000px;
+}
+.button:hover {
+  background-color: #06162F;
+}
+.button.small {
+  padding: 0.5rem 1.25rem;
+}
+.button.orange {
+  background-color: #F79824;
+  color: #FFFFFF;
+}
+.button.orange:hover {
+  background-color: #2176FF;
+  color: #FFFFFF;
+}
+.button.dkblue {
+  background-color: #06162F;
+  color: #FFFFFF;
+}
+.button.dkblue:hover {
+  background-color: #33A1FD;
+  color: #FFFFFF;
+}
+.button.mdblue {
+  background-color: #2176FF;
+  color: #FFFFFF;
+}
+.button.mdblue:hover {
+  background-color: #33A1FD;
+  color: #FFFFFF;
+}
+.button.green {
+  background-color: #319600;
+  color: #FFFFFF;
+}
+.button.green:hover {
+  background-color: #33A1FD;
+  color: #FFFFFF;
+}
+.button.white {
+  background-color: #FFFFFF;
+  color: #33A1FD;
+}
+.button.white.hollow {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+.button.grey {
+  background-color: #222221;
+}
+.button.grey:hover {
+  background-color: #494947;
+}
+.button.grey.hollow {
+  background-color: transparent;
+  border: 1px solid #494947;
+  color: #494947;
+}
+.button.round-left {
+  border-radius: 1000px 0 0 1000px;
+}
+
+.top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.data-region {
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+dl dt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+}
+dl dd {
+  margin-bottom: 1rem;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.center-vh {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-v {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*----- VALIDATION ------*/
+.validation {
+  background: #FEE;
+  border: solid 1px #900;
+  margin-bottom: 10px;
+}
+.validation .error {
+  margin: 10px;
+  color: #900;
+}
+
+.err input {
+  border: solid 1px #F00;
+}
+.err input:focus {
+  border: solid 1px #F99;
+}
+.err textarea {
+  border: solid 1px #F00;
+}
+.err textarea:focus {
+  border: solid 1px #F99;
+}
+.err select {
+  border: solid 1px #F00;
+}
+.err select:focus {
+  border: solid 1px #F99;
+}
+.err .err-msg {
+  display: inline-block;
+  color: #F00;
+  bottom: auto;
+  top: 2px;
+}
+
+.err-msg {
+  display: none;
+}
+
+.err-desc {
+  color: #F00;
+}
+
+/*----- SMALL -----*/
+/*----- MEDIUM -----*/
+/*----- LARGE -----*/
+/*----- Components -------*/
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Variables and Mixins
+
+=====*/
+/*----- COLORS -----*/
+/* RGB */
+/*----- FONTS -----*/
+/*----- GRADIENTS -----*/
+/*----- MIXINS -----*/
+/*@mixin box-shadow 		{ box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.2); }*/
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Style Guide - Global Styles
+
+=====*/
+/*----- GLOBAL -----*/
+* {
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+p input[type=checkbox], .help-text input[type=checkbox] {
+  margin: 0;
+}
+
+span {
+  color: inherit;
+}
+
+blockquote {
+  border: none;
+}
+
+strong {
+  font-family: inherit;
+}
+
+a.alert {
+  color: #F79824;
+}
+
+strong, em, i {
+  color: inherit;
+  font-size: inherit;
+}
+
+ol li {
+  margin-bottom: 1rem;
+}
+ol.level-two {
+  list-style-type: upper-latin;
+}
+ol.level-three {
+  list-style-type: upper-roman;
+}
+ol ul li {
+  margin-bottom: 0.25rem;
+}
+
+.page {
+  background: #FFFFFF;
+  max-width: 2500px;
+  margin: 0 auto;
+}
+
+.round-right {
+  border-radius: 0 1000px 1000px 0;
+}
+
+.round-left {
+  border-radius: 1000px 0 0 1000px;
+}
+
+.round-bottom {
+  border-radius: 0 0 1000px 1000px;
+}
+
+.round-top {
+  border-radius: 1000px 1000px 0 0;
+}
+
+.round-wrap {
+  border-radius: 25px;
+}
+
+.button-shadow {
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.box-shadow {
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.border-radius {
+  border-radius: 15px;
+}
+
+.text-green {
+  color: #319600;
+  font-style: normal;
+}
+
+.text-orange {
+  color: #F79824;
+  font-style: normal;
+}
+
+.text-ltblue {
+  color: #33A1FD;
+  font-style: normal;
+}
+
+.center-v {
+  position: relative;
+}
+.center-v .copy {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button {
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  text-transform: uppercase;
+  background-color: #33A1FD;
+  font-style: normal;
+  margin-bottom: 0;
+}
+.button.round {
+  border-radius: 1000px;
+}
+.button:hover {
+  background-color: #06162F;
+}
+.button.small {
+  padding: 0.5rem 1.25rem;
+}
+.button.orange {
+  background-color: #F79824;
+  color: #FFFFFF;
+}
+.button.orange:hover {
+  background-color: #2176FF;
+  color: #FFFFFF;
+}
+.button.dkblue {
+  background-color: #06162F;
+  color: #FFFFFF;
+}
+.button.dkblue:hover {
+  background-color: #33A1FD;
+  color: #FFFFFF;
+}
+.button.mdblue {
+  background-color: #2176FF;
+  color: #FFFFFF;
+}
+.button.mdblue:hover {
+  background-color: #33A1FD;
+  color: #FFFFFF;
+}
+.button.green {
+  background-color: #319600;
+  color: #FFFFFF;
+}
+.button.green:hover {
+  background-color: #33A1FD;
+  color: #FFFFFF;
+}
+.button.white {
+  background-color: #FFFFFF;
+  color: #33A1FD;
+}
+.button.white.hollow {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+.button.grey {
+  background-color: #222221;
+}
+.button.grey:hover {
+  background-color: #494947;
+}
+.button.grey.hollow {
+  background-color: transparent;
+  border: 1px solid #494947;
+  color: #494947;
+}
+.button.round-left {
+  border-radius: 1000px 0 0 1000px;
+}
+
+.top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.data-region {
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+dl dt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+}
+dl dd {
+  margin-bottom: 1rem;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.center-vh {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-v {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*----- VALIDATION ------*/
+.validation {
+  background: #FEE;
+  border: solid 1px #900;
+  margin-bottom: 10px;
+}
+.validation .error {
+  margin: 10px;
+  color: #900;
+}
+
+.err input {
+  border: solid 1px #F00;
+}
+.err input:focus {
+  border: solid 1px #F99;
+}
+.err textarea {
+  border: solid 1px #F00;
+}
+.err textarea:focus {
+  border: solid 1px #F99;
+}
+.err select {
+  border: solid 1px #F00;
+}
+.err select:focus {
+  border: solid 1px #F99;
+}
+.err .err-msg {
+  display: inline-block;
+  color: #F00;
+  bottom: auto;
+  top: 2px;
+}
+
+.err-msg {
+  display: none;
+}
+
+.err-desc {
+  color: #F00;
+}
+
+/*----- SMALL -----*/
+/*----- MEDIUM -----*/
+/*----- LARGE -----*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #000000;
+}
+
+li a:hover {
+  background-color: #33A1FD;
+  color: #FFFFFF;
+}
+
+/*----- SMALL -----*/
+@media screen and (max-width: 40em) {
+  li {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+}
+/*----- MEDIUM -----*/
+/*----- LARGE -----*/
+
+/*# sourceMappingURL=app.css.map */

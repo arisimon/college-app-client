@@ -1,0 +1,20 @@
+@import "../_variables.scss";
+@import "../grid.scss";
+
+.footer-bottom {
+	display: flex;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	flex-direction: column;
+	align-items: center;
+	color: $black;
+	font: $body;
+}
+
+.footer-bottom-wrap {
+	width: 70%;
+}
+
+.legal {
+	font-size: 12px;
+}

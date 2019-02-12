@@ -1,15 +1,20 @@
 import React, { Component } from "react";
-import "./scss/_styles.scss";
-import Navbar from './components/navbar';
+import "./app.css";
+
+import Landing from "./components/landing";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Navbar />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="App">
+				<Navbar />
+				<Landing />
+				<Footer />
+			</div>
+		);
+	}
 }
 
 export default App;
