@@ -1,0 +1,45 @@
+@import '../_variables.scss';
+@import '../grid.scss';
+
+#hero-section {
+	text-align: center;
+}
+
+#organize {
+}
+
+#progress {
+
+}
+
+#research {
+
+}
+
+
+/*-------MEDIA QUERIES-------*/
+
+/*----SMALL SCREENS----*/
+
+@media only screen and (max-width: 575px) {
+	#highlights {
+		text-align: center;
+	}
+}
+
+/*---- MEDIUM SCREENS ----*/
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+
+/*------ MEDIUM/LG SCREENS ---------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+
+/*------ XL SCREENS ---------*/
+
+@media only screen and (min-width: 1200px) {}

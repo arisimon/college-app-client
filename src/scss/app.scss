@@ -9,11 +9,13 @@ Set 		: 	Application
 
 
 /*----- Utilities -------*/
-@import "_variables.scss";
-@import "grid.scss";
-@import "global.scss";
+@import "variables";
+@import "grid";
+@import "global";
 
 
 
 /*----- Components -------*/
-@import "./components/navbar.scss";
+@import "components/navbar";
+@import "components/footer";
+@import "components/landing";

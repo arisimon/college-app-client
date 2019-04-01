@@ -22,18 +22,6 @@ Set 		: 	Variables and Mixins
 /*----- MIXINS -----*/
 /*@mixin box-shadow 		{ box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.2); }*/
 /*----- LARGE -----*/
-/* Grid measurements:
- *
- *   960px wide including 12 gutters (half gutters on both edges)
- *
- *   60px columns (12)
- *   20px gutters (two half-gutters + 11 full gutters, so 12 total)
- *
- *
- *   For smaller screens, we always want 20px of padding on either side,
- *   so 960 + 20 + 20 => 1000px
- *
- **/
 .row {
   max-width: 1000px;
   padding-left: 20px;
@@ -52,47 +40,69 @@ Set 		: 	Variables and Mixins
   clear: both;
 }
 
-.col-3,
-.col-4,
-.col-6,
-.col-12 {
+[class*=col-] {
   float: left;
   /* Gutters:
-   * Each column is padded by half-a-gutter on each side,
-   *
-   * Half a gutter is 10px, 10/960 (context) = 1.041666%
-   *
-   */
+  * Each column is padded by half-a-gutter on each side,
+  *
+  * Half a gutter is 10px, 10/960 (context) = 1.041666%
+  *
+  */
   padding-left: 1.04166666%;
   padding-right: 1.04166666%;
 }
 
 /* Mobile defaults */
-.col-3,
-.col-4,
-.col-6,
-.col-12 {
+[class*=col-] {
   width: 100%;
 }
 
 /* Non-mobile, grid */
-@media only screen and (min-width: 640px) {
-  /* 3 columns, 3/12 in % */
+@media only screen and (min-width: 600px) {
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
   .col-3 {
     width: 25%;
   }
 
-  /* 4 columns, 4/12 in % */
   .col-4 {
     width: 33.33%;
   }
 
-  /* 6 columns 6/12 in % */
+  .col-5 {
+    width: 41.66%;
+  }
+
   .col-6 {
     width: 50%;
   }
 
-  /* 12 columns, 12/12 */
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
   .col-12 {
     width: 100%;
   }
@@ -116,12 +126,54 @@ body.noscroll {
   overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+hr.gray {
+  background: #494947;
 }
 
-p input[type=checkbox], .help-text input[type=checkbox] {
+hr.main {
+  margin: 40px 4rem 60px 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 16px;
+}
+
+p input[type=checkbox],
+.help-text input[type=checkbox] {
   margin: 0;
 }
 
@@ -141,7 +193,9 @@ a.alert {
   color: #F79824;
 }
 
-strong, em, i {
+strong,
+em,
+i {
   color: inherit;
   font-size: inherit;
 }
@@ -157,12 +211,6 @@ ol.level-three {
 }
 ol ul li {
   margin-bottom: 0.25rem;
-}
-
-.page {
-  background: #FFFFFF;
-  max-width: 2500px;
-  margin: 0 auto;
 }
 
 .round-right {
@@ -386,9 +434,40 @@ dl dd {
   color: #F00;
 }
 
-/*----- SMALL -----*/
-/*----- MEDIUM -----*/
-/*----- LARGE -----*/
+/*-------MEDIA QUERIES-------*/
+/*----SMALL SCREENS----*/
+@media only screen and (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/*---- MEDIUM SCREENS ----*/
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+/*------ MEDIUM/LG SCREENS ---------*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+/*------ XL SCREENS ---------*/
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
 /*----- Components -------*/
 /*=====
 
@@ -423,12 +502,54 @@ body.noscroll {
   overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+hr.gray {
+  background: #494947;
 }
 
-p input[type=checkbox], .help-text input[type=checkbox] {
+hr.main {
+  margin: 40px 4rem 60px 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 16px;
+}
+
+p input[type=checkbox],
+.help-text input[type=checkbox] {
   margin: 0;
 }
 
@@ -448,7 +569,9 @@ a.alert {
   color: #F79824;
 }
 
-strong, em, i {
+strong,
+em,
+i {
   color: inherit;
   font-size: inherit;
 }
@@ -464,12 +587,6 @@ ol.level-three {
 }
 ol ul li {
   margin-bottom: 0.25rem;
-}
-
-.page {
-  background: #FFFFFF;
-  max-width: 2500px;
-  margin: 0 auto;
 }
 
 .round-right {
@@ -693,15 +810,45 @@ dl dd {
   color: #F00;
 }
 
-/*----- SMALL -----*/
-/*----- MEDIUM -----*/
-/*----- LARGE -----*/
+/*-------MEDIA QUERIES-------*/
+/*----SMALL SCREENS----*/
+@media only screen and (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/*---- MEDIUM SCREENS ----*/
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+/*------ MEDIUM/LG SCREENS ---------*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+/*------ XL SCREENS ---------*/
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
 }
 
 li {
@@ -714,6 +861,7 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
   color: #000000;
+  font-family: "Roboto", sans-serif;
 }
 
 li a:hover {
@@ -721,15 +869,244 @@ li a:hover {
   color: #FFFFFF;
 }
 
-/*----- SMALL -----*/
-@media screen and (max-width: 40em) {
+/*-------MEDIA QUERIES-------*/
+/*----SMALL SCREENS----*/
+@media only screen and (max-width: 575px) {
   li {
     float: none;
     display: block;
     width: 100%;
   }
 }
-/*----- MEDIUM -----*/
+/*---- MEDIUM SCREENS ----*/
+/*------ MEDIUM/LG SCREENS ---------*/
+/*------ XL SCREENS ---------*/
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Variables and Mixins
+
+=====*/
+/*----- COLORS -----*/
+/* RGB */
+/*----- FONTS -----*/
+/*----- GRADIENTS -----*/
+/*----- MIXINS -----*/
+/*@mixin box-shadow 		{ box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.2); }*/
 /*----- LARGE -----*/
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: "";
+}
+
+.row::after {
+  clear: both;
+}
+
+[class*=col-] {
+  float: left;
+  /* Gutters:
+  * Each column is padded by half-a-gutter on each side,
+  *
+  * Half a gutter is 10px, 10/960 (context) = 1.041666%
+  *
+  */
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+/* Mobile defaults */
+[class*=col-] {
+  width: 100%;
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 600px) {
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*-------MEDIA QUERIES-------*/
+/*----SMALL SCREENS----*/
+/*---- MEDIUM SCREENS ----*/
+/*------ MEDIUM/LG SCREENS ---------*/
+/*------ XL SCREENS ---------*/
+/*=====
+
+Project		: 	College Application Tracker
+Author 		: 	Ari Simon
+
+Set 		: 	Variables and Mixins
+
+=====*/
+/*----- COLORS -----*/
+/* RGB */
+/*----- FONTS -----*/
+/*----- GRADIENTS -----*/
+/*----- MIXINS -----*/
+/*@mixin box-shadow 		{ box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.2); }*/
+/*----- LARGE -----*/
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: "";
+}
+
+.row::after {
+  clear: both;
+}
+
+[class*=col-] {
+  float: left;
+  /* Gutters:
+  * Each column is padded by half-a-gutter on each side,
+  *
+  * Half a gutter is 10px, 10/960 (context) = 1.041666%
+  *
+  */
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+/* Mobile defaults */
+[class*=col-] {
+  width: 100%;
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 600px) {
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+#hero-section {
+  text-align: center;
+}
+
+/*-------MEDIA QUERIES-------*/
+/*----SMALL SCREENS----*/
+@media only screen and (max-width: 575px) {
+  #highlights {
+    text-align: center;
+  }
+}
+/*---- MEDIUM SCREENS ----*/
+/*------ MEDIUM/LG SCREENS ---------*/
+/*------ XL SCREENS ---------*/
 
 /*# sourceMappingURL=app.css.map */

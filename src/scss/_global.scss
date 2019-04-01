@@ -1,0 +1,441 @@
+/*=====
+
+Project     :   College Application Tracker
+Author      :   Ari Simon
+
+Set         :   Style Guide - Global Styles
+
+=====*/
+
+
+
+/*----- GLOBAL -----*/
+
+* {
+    font-family: $body;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+
+hr.main {
+    margin: 40px 4rem 60px 4rem;
+    background: $grey;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $header;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+p,
+.help-text {
+    input[type=checkbox] {
+        margin: 0;
+    }
+}
+
+.page {
+    background: $white;
+    max-width: 2500px;
+    margin: 0 auto;
+}
+
+
+
+span {
+    color: inherit;
+}
+
+blockquote {
+    border: none;
+}
+
+strong {
+    font-family: inherit;
+}
+
+
+
+a {
+    &.alert {
+        color: $orange;
+    }
+}
+
+strong,
+em,
+i {
+    color: inherit;
+    font-size: inherit;
+}
+
+ol {
+    li {
+        margin-bottom: 1rem;
+    }
+
+    &.level-one {}
+
+    &.level-two {
+        list-style-type: upper-latin;
+    }
+
+    &.level-three {
+        list-style-type: upper-roman;
+    }
+
+    ul {
+        li {
+            margin-bottom: 0.25rem;
+        }
+    }
+}
+
+
+.round-right {
+    border-radius: 0 1000px 1000px 0;
+}
+
+.round-left {
+    border-radius: 1000px 0 0 1000px;
+}
+
+.round-bottom {
+    border-radius: 0 0 1000px 1000px;
+}
+
+.round-top {
+    border-radius: 1000px 1000px 0 0;
+}
+
+.round-wrap {
+    border-radius: 25px;
+}
+
+.button-shadow {
+    @include button-shadow;
+}
+
+.box-shadow {
+    @include box-shadow;
+}
+
+.border-radius {
+    border-radius: 15px;
+}
+
+
+.text-green {
+    color: $green;
+    font-style: normal;
+}
+
+.text-orange {
+    color: $orange;
+    font-style: normal;
+}
+
+.text-ltblue {
+    color: $ltblue;
+    font-style: normal;
+}
+
+
+.center-v {
+    position: relative;
+
+    .copy {
+        @include center-v;
+    }
+}
+
+.button {
+    padding: 0.75rem 2rem;
+    border-radius: 0;
+    text-transform: uppercase;
+    background-color: $ltblue;
+    font-style: normal;
+    margin-bottom: 0;
+
+    &.round {
+        border-radius: 1000px;
+    }
+
+    &:hover {
+        background-color: $dkblue;
+    }
+
+    &.small {
+        padding: 0.5rem 1.25rem;
+    }
+
+    &.orange {
+        background-color: $orange;
+        color: $white;
+
+        &:hover {
+            background-color: $mdblue;
+            color: $white;
+        }
+    }
+
+    &.dkblue {
+        background-color: $dkblue;
+        color: $white;
+
+        &:hover {
+            background-color: $ltblue;
+            color: $white;
+        }
+    }
+
+    &.mdblue {
+        background-color: $mdblue;
+        color: $white;
+
+        &:hover {
+            background-color: $ltblue;
+            color: $white;
+        }
+    }
+
+    &.green {
+        background-color: $green;
+        color: $white;
+
+        &:hover {
+            background-color: $ltblue;
+            color: $white;
+        }
+    }
+
+    &.white {
+        background-color: $white;
+        color: $ltblue;
+
+        &.hollow {
+            background-color: transparent;
+            border: 1px solid $white;
+            color: $white;
+        }
+    }
+
+    &.grey {
+        background-color: $dkgrey;
+
+        &:hover {
+            background-color: $grey;
+        }
+
+        &.hollow {
+            background-color: transparent;
+            border: 1px solid $grey;
+            color: $grey;
+        }
+    }
+
+    &.round-left {
+        border-radius: 1000px 0 0 1000px;
+    }
+}
+
+
+.top-right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.logout {
+    cursor: pointer;
+}
+
+.data-region {
+    max-height: 45vh;
+    overflow-y: auto;
+}
+
+
+
+dl {
+    dt {
+        font-family: $header;
+        font-weight: 400;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    dd {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+table {}
+
+
+
+.position-relative {
+    position: relative;
+}
+
+.center-vh {
+    @include center-vh;
+}
+
+.center-v {
+    @include center-v;
+}
+
+
+
+/*----- VALIDATION ------*/
+
+.validation {
+    background: #FEE;
+    border: solid 1px #900;
+    margin-bottom: 10px;
+
+    .error {
+        margin: 10px;
+        color: #900;
+    }
+}
+
+.err {
+    input {
+        border: solid 1px #F00;
+
+        &:focus {
+            border: solid 1px #F99;
+        }
+    }
+
+    textarea {
+        border: solid 1px #F00;
+
+        &:focus {
+            border: solid 1px #F99;
+        }
+    }
+
+    select {
+        border: solid 1px #F00;
+
+        &:focus {
+            border: solid 1px #F99;
+        }
+    }
+
+    .err-msg {
+        display: inline-block;
+        color: #F00;
+        bottom: auto;
+        top: 2px;
+    }
+}
+
+.err-msg {
+    display: none;
+}
+
+.err-desc {
+    color: #F00;
+}
+
+
+/*-------MEDIA QUERIES-------*/
+
+/*----SMALL SCREENS----*/
+
+@media only screen and (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/*---- MEDIUM SCREENS ----*/
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+
+/*------ MEDIUM/LG SCREENS ---------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+
+/*------ XL SCREENS ---------*/
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}

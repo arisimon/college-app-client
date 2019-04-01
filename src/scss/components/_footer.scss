@@ -1,0 +1,34 @@
+@import "../_variables.scss";
+@import "../grid.scss";
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+/*-------MEDIA QUERIES-------*/
+
+/*----SMALL SCREENS----*/
+
+@media only screen and (max-width: 575px) {}
+
+/*---- MEDIUM SCREENS ----*/
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+
+/*------ MEDIUM/LG SCREENS ---------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+
+/*------ XL SCREENS ---------*/
+
+@media only screen and (min-width: 1200px) {}

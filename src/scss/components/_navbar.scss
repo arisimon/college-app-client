@@ -1,0 +1,56 @@
+@import "../_variables.scss";
+@import "../global.scss";
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: $black;
+  font-family: $body;
+}
+
+li a:hover {
+  background-color: $ltblue;
+  color: $white;
+}
+
+/*-------MEDIA QUERIES-------*/
+
+/*----SMALL SCREENS----*/
+
+@media only screen and (max-width: 575px) {
+  li {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+}
+
+/*---- MEDIUM SCREENS ----*/
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+
+/*------ MEDIUM/LG SCREENS ---------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+
+/*------ XL SCREENS ---------*/
+
+@media only screen and (min-width: 1200px) {}

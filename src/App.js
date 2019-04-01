@@ -3,7 +3,7 @@ import "./app.css";
 
 import Landing from "./components/landing";
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+// import Footer from "./components/footer";
 
 class App extends Component {
 	render() {
@@ -11,7 +11,7 @@ class App extends Component {
 			<div className="App">
 				<Navbar />
 				<Landing />
-				<Footer />
+				{/*<Footer />*/}
 			</div>
 		);
 	}
