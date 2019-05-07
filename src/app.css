@@ -109,10 +109,10 @@ Set 		: 	Variables and Mixins
 }
 /*=====
 
-Project		: 	College Application Tracker
-Author 		: 	Ari Simon
+Project     :   College Application Tracker
+Author      :   Ari Simon
 
-Set 		: 	Style Guide - Global Styles
+Set         :   Style Guide - Global Styles
 
 =====*/
 /*----- GLOBAL -----*/
@@ -126,12 +126,9 @@ body.noscroll {
   overflow: hidden;
 }
 
-hr.gray {
-  background: #494947;
-}
-
 hr.main {
   margin: 40px 4rem 60px 4rem;
+  background: #494947;
 }
 
 h1,
@@ -175,6 +172,12 @@ p {
 p input[type=checkbox],
 .help-text input[type=checkbox] {
   margin: 0;
+}
+
+.page {
+  background: #FFFFFF;
+  max-width: 2500px;
+  margin: 0 auto;
 }
 
 span {
@@ -485,10 +488,10 @@ Set 		: 	Variables and Mixins
 /*@mixin box-shadow 		{ box-shadow: 0 5px 40px 10px rgba(0, 0, 0, 0.2); }*/
 /*=====
 
-Project		: 	College Application Tracker
-Author 		: 	Ari Simon
+Project     :   College Application Tracker
+Author      :   Ari Simon
 
-Set 		: 	Style Guide - Global Styles
+Set         :   Style Guide - Global Styles
 
 =====*/
 /*----- GLOBAL -----*/
@@ -502,12 +505,9 @@ body.noscroll {
   overflow: hidden;
 }
 
-hr.gray {
-  background: #494947;
-}
-
 hr.main {
   margin: 40px 4rem 60px 4rem;
+  background: #494947;
 }
 
 h1,
@@ -551,6 +551,12 @@ p {
 p input[type=checkbox],
 .help-text input[type=checkbox] {
   margin: 0;
+}
+
+.page {
+  background: #FFFFFF;
+  max-width: 2500px;
+  margin: 0 auto;
 }
 
 span {

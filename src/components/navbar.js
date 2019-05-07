@@ -1,29 +1,41 @@
 import React, { Component } from "react";
-// import {Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "../scss/components/_navbar.scss";
+
+import Landing from "../components/landing";
+import Registration from "../components/registration";
+import Login from "../components/login";
+import NotFound from "../components/404";
 
 class Navbar extends Component {
 	render() {
 		return (
-			<div className="nav-container">
-				<nav id="page-nav">
-					<ul>
-						<li id="register-btn">
-							<a href="#">Register</a>
-						</li>
-						<li>
-							<a href="#">Log In</a>
-						</li>
-						<li>
-							<a href="#">My Apps</a>
-						</li>
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li />
-					</ul>
-				</nav>
-			</div>
+			<Router>
+				<div className="nav-container">
+					<nav>
+						<ul>
+							<li>
+								<Link to="/register"> Register </Link>
+							</li>
+							<li>
+								<Link to="/login"> Login</Link>
+							</li>
+							<li>
+								<Link to="/apps"> My Apps </Link>
+							</li>
+							<li>
+								<Link to="/"> Home </Link>
+							</li>
+						</ul>
+						<Switch>
+						<Route exact path="/" component={Landing} />
+						<Route exact path="/register" component={Registration} />
+						<Route exact path="/login" component={Login} />
+						<Route component={NotFound}></Route>
+						</Switch>
+					</nav>
+				</div>
+			</Router>
 		);
 	}
 }

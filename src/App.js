@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import "./app.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Landing from "./components/landing";
 import Navbar from "./components/navbar";
 // import Footer from "./components/footer";
+//
 
 class App extends Component {
 	render() {
 		return (
 			<div className="App">
 				<Navbar />
-				<Landing />
 				{/*<Footer />*/}
+
 			</div>
 		);
 	}

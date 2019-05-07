@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../scss/components/_landing.scss";
 
-class Landing extends Component {
+export default class Landing extends Component {
 	render() {
 		return (
 			<div className="container page">
@@ -55,4 +55,4 @@ class Landing extends Component {
 	}
 }
 
-export default Landing;
+
