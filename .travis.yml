@@ -2,4 +2,11 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: 0SAYZEhozIEfdklui54kv8ZQY0nkdZgCivhDIFCGqEPihsSM1h50O9zZzBbbfvorQtts6sNJz2STg/pU4jzMOM/ITe+dPXTrip0YQsYmi+WBLTFJUKa4QXy4eba+AHawl7NWxVb0k6AGgHPdiz9tTvbeGZPtZea+6No6il8aS1LvbvCRV0C96XU/K+/NjWMYzhsd4ixtsWeKYARNRUKs9WJDg4iTLbgRzXg3ybmELPlgL5rR/46cN0g9oZuotYT6/0UsmV0RvBYl9Rg1U6c8D6x9wfa4ksp4OVpUjKgF2TXSFUVkLUo9iije42FpzUGUMgUfA+ArZSRx3VcNXPJ0dedgjI81akeaPMgFuzjEyVJ5JofeT3onxGWnYKOEoBFHtOL9vKzGph5d65m6isM5PdaNjsGZT+Rt8+RF1HGPCdVqvMMrF1c6ixs+3v0SMs28xlPMzKchrBRoIP5cQn7DZ7U/AkcqZJPFQZCJLSCN+Y23iHxxMV7HZpiggEfMG4dDFIu39mEOBhRLzb/dJVigo/fiT7kmM66r2+Tdo58GfzQVjsM8qqvmaruIW0dm4z146Eh13KFmDQwATvmvkuz+WJRT8VuOooqhqCNTpFHXd2t9N42qfpHFP3YaCrQF12Moe/I/gdhY9gDQaYq/6zLhlf/PUgUAzuaKy1cOC5MGNUs=
+  app: vast-brook-61302
+  on:
+    repo: arisimon/college-app-client
