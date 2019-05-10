@@ -1,7 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
 function NotFound() {
-	return <h1>404 - Sorry this page cannot be found</h1>;
+	return (
+	<div className="container">
+	<h1 id="not-found">404 - Sorry this page cannot be found</h1>
+	</div>
+	);
 }
 
 export default NotFound;
