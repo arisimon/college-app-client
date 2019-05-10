@@ -6,6 +6,7 @@ import Landing from "../components/landing";
 import Registration from "../components/registration";
 import Login from "../components/login";
 import NotFound from "../components/404";
+import Dashboard from "../components/dashboard";
 
 class Navbar extends Component {
 	render() {
@@ -31,6 +32,7 @@ class Navbar extends Component {
 						<Route exact path="/" component={Landing} />
 						<Route exact path="/register" component={Registration} />
 						<Route exact path="/login" component={Login} />
+						<Route exact path="/apps" component={Dashboard} />
 						<Route component={NotFound}></Route>
 						</Switch>
 					</nav>
