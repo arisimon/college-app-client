@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "../scss/components/_landing.scss";
 
-export default class Landing extends Component {
-	render() {
+export default function Landing () {
 		return (
 			<div className="container page">
 				<section id="hero-section">
@@ -52,7 +51,6 @@ export default class Landing extends Component {
 				</section>
 			</div>
 		);
-	}
 }
 
 

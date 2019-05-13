@@ -248,6 +248,10 @@ ol ul li {
   border-radius: 15px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-green {
   color: #319600;
   font-style: normal;
@@ -625,6 +629,10 @@ ol ul li {
 
 .border-radius {
   border-radius: 15px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-green {
@@ -1115,7 +1123,6 @@ Set 		: 	Variables and Mixins
 /*------ MEDIUM/LG SCREENS ---------*/
 /*------ XL SCREENS ---------*/
 #not-found {
-  text-align: center;
   left: 0;
   line-height: 200px;
   margin: auto;

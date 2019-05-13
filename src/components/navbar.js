@@ -8,7 +8,7 @@ import Login from "../components/login";
 import NotFound from "../components/404";
 import Dashboard from "../components/dashboard";
 
-class Navbar extends Component {
+export default class Navbar extends Component {
 	render() {
 		return (
 			<Router>
@@ -42,4 +42,4 @@ class Navbar extends Component {
 	}
 }
 
-export default Navbar;
+
