@@ -301,6 +301,14 @@ ol ul li {
   background-color: #2176FF;
   color: #FFFFFF;
 }
+.button.red {
+  background-color: #A20021;
+  color: #FFFFFF;
+}
+.button.red:hover {
+  background-color: #F00;
+  color: #FFFFFF;
+}
 .button.dkblue {
   background-color: #06162F;
   color: #FFFFFF;
@@ -682,6 +690,14 @@ ol ul li {
 }
 .button.orange:hover {
   background-color: #2176FF;
+  color: #FFFFFF;
+}
+.button.red {
+  background-color: #A20021;
+  color: #FFFFFF;
+}
+.button.red:hover {
+  background-color: #F00;
   color: #FFFFFF;
 }
 .button.dkblue {
@@ -1130,6 +1146,15 @@ Set 		: 	Variables and Mixins
   position: absolute;
   top: 50%;
   width: 100%;
+}
+
+.application-card {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.container {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=app.css.map */

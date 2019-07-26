@@ -224,6 +224,15 @@ ol {
             color: $white;
         }
     }
+    &.red {
+        background-color: $red;
+        color: $white;
+
+        &:hover {
+            background-color: #F00;
+            color: $white;
+        }
+    }
 
     &.dkblue {
         background-color: $dkblue;

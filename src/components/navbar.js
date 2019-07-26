@@ -29,11 +29,15 @@ export default class Navbar extends Component {
 							</li>
 						</ul>
 						<Switch>
-						<Route exact path="/" component={Landing} />
-						<Route exact path="/register" component={Registration} />
-						<Route exact path="/login" component={Login} />
-						<Route exact path="/apps" component={Dashboard} />
-						<Route component={NotFound}></Route>
+							<Route exact path="/" component={Landing} />
+							<Route
+								exact
+								path="/register"
+								component={Registration}
+							/>
+							<Route exact path="/login" component={Login} />
+							<Route exact path="/apps" component={Dashboard} />
+							<Route component={NotFound} />
 						</Switch>
 					</nav>
 				</div>
@@ -41,5 +45,3 @@ export default class Navbar extends Component {
 		);
 	}
 }
-
-
