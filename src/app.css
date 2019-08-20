@@ -283,6 +283,7 @@ ol ul li {
   background-color: #33A1FD;
   font-style: normal;
   margin-bottom: 0;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
 }
 .button.round {
   border-radius: 1000px;
@@ -674,6 +675,7 @@ ol ul li {
   background-color: #33A1FD;
   font-style: normal;
   margin-bottom: 0;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
 }
 .button.round {
   border-radius: 1000px;
@@ -1138,6 +1140,24 @@ Set 		: 	Variables and Mixins
 /*---- MEDIUM SCREENS ----*/
 /*------ MEDIUM/LG SCREENS ---------*/
 /*------ XL SCREENS ---------*/
+.registration-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#reg-button {
+  margin-top: 10px;
+}
+
+.login-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#login-button {
+  margin-top: 10px;
+}
+
 #not-found {
   left: 0;
   line-height: 200px;

@@ -3,7 +3,7 @@ import "../scss/components/_registration.scss";
 
 export default function Registration() {
 	return (
-		<div className="registration-container text-center">
+		<div className="registration-container">
 			<h1>Registration page</h1>
 			<p>Register for an account below:</p>
 			<form id="registration-form">
@@ -19,7 +19,7 @@ export default function Registration() {
 				<br />
 				<input type="password" id="password-input" />
 				<br />
-				<button className="button" type="submit">
+				<button className="button" id="reg-button" type="submit">
 					Register
 				</button>
 			</form>
