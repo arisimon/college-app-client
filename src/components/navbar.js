@@ -7,6 +7,8 @@ import Registration from "../components/registration";
 import Login from "../components/login";
 import NotFound from "../components/404";
 import Dashboard from "../components/dashboard";
+import AddAppForm from "../components/add-app";
+
 
 export default class Navbar extends Component {
 	render() {
@@ -25,6 +27,9 @@ export default class Navbar extends Component {
 								<Link to="/apps"> My Apps </Link>
 							</li>
 							<li>
+								<Link to="/add-app"> Create New App </Link>
+							</li>
+							<li>
 								<Link to="/"> Home </Link>
 							</li>
 						</ul>
@@ -37,6 +42,7 @@ export default class Navbar extends Component {
 							/>
 							<Route exact path="/login" component={Login} />
 							<Route exact path="/apps" component={Dashboard} />
+							<Route exact path="add-app" component={AddAppForm} />
 							<Route component={NotFound} />
 						</Switch>
 					</nav>

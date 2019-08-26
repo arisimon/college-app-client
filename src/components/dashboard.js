@@ -8,15 +8,26 @@ export default class Dashboard extends Component {
 		return (
 			<div>
 				<h1 className="text-center">My College Apps</h1>
-				<div className="container">
+				<div className="container" id="app-container">
 					<div className="row">
-						<div className="col-4">
+						<div className="col-4 app" data-id="1">
 							<AppCard />
 						</div>
-						<div className="col-4">
+						<div className="col-4 app" data-id="2">
 							<AppCard />
 						</div>
-						<div className="col-4">
+						<div className="col-4 app" data-id="3">
+							<AppCard />
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-4 app" data-id="4">
+							<AppCard />
+						</div>
+						<div className="col-4 app" data-id="5">
+							<AppCard />
+						</div>
+						<div className="col-4 app" data-id="6">
 							<AppCard />
 						</div>
 					</div>

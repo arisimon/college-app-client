@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../scss/components/_app-card.scss";
+import AddAppForm from "../components/add-app";
+
 
 export default class AppCard extends Component {
 	render() {
@@ -26,10 +28,14 @@ export default class AppCard extends Component {
 							</tr>
 							<tr>
 								<td>
-									<button className="button small">View</button>
+									<button className="button small" >
+										View
+									</button>
 								</td>
 								<td>
-									<button className="button small red">Delete</button>
+									<button className="button small red">
+										Delete
+									</button>
 								</td>
 							</tr>
 						</tbody>

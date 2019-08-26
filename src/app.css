@@ -307,7 +307,7 @@ ol ul li {
   color: #FFFFFF;
 }
 .button.red:hover {
-  background-color: #F00;
+  background-color: #A20021;
   color: #FFFFFF;
 }
 .button.dkblue {
@@ -699,7 +699,7 @@ ol ul li {
   color: #FFFFFF;
 }
 .button.red:hover {
-  background-color: #F00;
+  background-color: #A20021;
   color: #FFFFFF;
 }
 .button.dkblue {
@@ -1173,8 +1173,13 @@ Set 		: 	Variables and Mixins
   padding: 5px;
 }
 
-.container {
+#app-container {
+  text-align: center;
   margin: 0 auto;
+}
+
+.app {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=app.css.map */
